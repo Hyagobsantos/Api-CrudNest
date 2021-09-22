@@ -10,7 +10,7 @@ export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
 
   create(createUserDto: CreateUserDto) {
-    const user = new this.userModel(createUserDto); //caso de erro ao criar está aqui no userModel passar como UserModel
+    const user = new this.userModel(createUserDto);
     return user.save();
   }
 
